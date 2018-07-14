@@ -1,8 +1,8 @@
 FROM vromero/activemq-artemis:2.6.1
 
-COPY scripts/config.sh .
+COPY scripts/config.sh /opt/config.sh
 
-RUN  config.sh
+RUN  /opt/config.sh
 
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
